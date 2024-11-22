@@ -1,0 +1,27 @@
+***
+# ProjectC
+
+## Overview 
+ProjectC is a Content Management System built with a focus on client-side rendering using a combination of HTML, JavaScript, and JSON for dynamic content rendering and theme switching. The CMS leverages a JSON file to store and display content dynamically, with features like automatic content loading, theme switching, and view toggling between abstract and long-form content.
+
+## Features 
+- Fetches the content from "content.json" , which holds an array of objects containing titles, abstracts, and long-form content.
+- The navigation bar is automatically populated with buttons corresponding to each title in the content.json file. Clicking on a button loads the corresponding content in the main content area.
+-  Users can toggle between an abstract view (short description) and a long content view (full text) for each section using the "Abstract/Long Content" button.
+- Supports switching between multiple themes (dark, day, contrast) via external CSS stylesheets. The active theme persists across content loads.
+- Displays status messages, such as "Loading...", "Page Loaded", and other relevant notifications, including error messages, to keep users informed during content changes.
+
+## How to use
+- Clone the repository or download the project files.
+- Ensure all essential files are in the same directory:
+    "cms3.html" (main CMS file)
+    "content.json" (content data file)
+    CSS files (e.g., "Dark.css", "Day.css", "Contrast.css")
+    Other external files (.jpg, .gif)
+- Open the "cms3.html" file directly in a modern web browser. 
+
+layancodes 
+2024
+
+***
+
