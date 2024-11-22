@@ -1,1 +1,19 @@
+***
 
+ProjectA is a simple PHP-based Content Management System with dynamic content rendering, theme switching, and error handling, designed as part of a web development assignment. It fulfills the following:
+
+- Displays external markdown-based content dynamically based on user navigation (using PHP).
+- Allows users to toggle between themes (dark, day, contrast) via external CSS stylesheets and JavaScript.
+- Handles errors gracefully when invalid or inaccessible content is requested (using PHP).
+- Implements a fixed navigation bar and scrollable content area for a seamless browsing experiencs (through HTML structuring and CSS styling)
+
+To use 
+- Clone the repository or download the project files.
+- Place the project in a PHP-compatible server environment.
+- Ensure all external  files (.css, .md, ,jpg, .gif) are in the same directory as the CMS.
+- Open cms.php in your browser to start exploring.
+
+layancodes
+2024
+
+****
