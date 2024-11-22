@@ -1,0 +1,39 @@
+[
+    {
+        "title": "Welcome!",
+        "abstract": "#Welcome to my page!",
+        "long" : "#Welcome to my page!\n This website is a tool for me to practice HTML, CSS, PHP, and JS.\n ![alt text](autumnleaves.gif)"
+    },
+    {
+        "title": "Sky Colours",
+        "abstract": "*Do you like the colour of the sky?*",
+        "long" : "*Which one?*\n![alt text](im2.jpg)\n![alt text](im3.jpg)\n![alt text](im4.jpg)\n![alt text](im6.jpg)\n![alt text](im7.jpg)\n![alt text](im8.jpg)\n![alt text](im9.jpg)\n![alt text](im10.jpg)"
+    },
+    {
+        "title": "Recipes",
+        "abstract": "##Some of my favourite sweet and savoury recipes!",
+        "long" : "##Below are videos of some of my favourite recipes:\n###[Peanut Cookie (1920s recipe)](https://www.youtube.com/embed/Oyeerr7cjko)\n###[Walnut Lemon Bars](https://www.youtube.com/embed/DowT8Y_2U64)\n###[Old  Fashioned Doughnuts (Sour Cream Doughnuts)](https://www.youtube.com/embed/PpKoNGRXujY)\n###[Recipe recommend highly by Lauren!](https://www.youtube.com/embed/6EvHh0akdyQ)\n###[More of my favourite recipes!](https://layanumnum.wixsite.com/home/post/links-to-all-recipes-i-shared)"
+    },
+    {
+        "title": "Contact",
+        "abstract": "##don't contact me.",
+        "long" : "**Here are some emails you can spam instead**\n1. zuck@fb.com\n2. elon@tesla.com\n3. warren.buffett@berkshirehathaway.com\n4. president@whitehouse.gov"
+    },
+    {
+        "title": "No access test",
+        "abstract": "Error 503 Service Unavailable",
+        "long" : "Error 503: server recieved invalid response from the upstream server."
+    },
+    {
+        "title": "Invalid request test",
+        "abstract": "Error 404 Not Found",
+        "long" : "Error 404: server could not find what was requested."
+    },
+    {
+        "title": "Bored",
+        "abstract": "How can you be bored when there is so much to learn about programming!",
+        "long" : "You can watch the ninja fights below, or go play [this game](https://scratch.mit.edu/projects/794762400/) I made to practice programming on scratch.\n![alt text](ninja.gif)\n![alt text](ninja2.gif)"
+    }
+
+]
+    

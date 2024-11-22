@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<title>Assignment 3</title>
+
+<link id="css-link" rel="stylesheet" href="Dark.css">
+<style> 
+/*--- GENERAL ---*/
+body{
+    font-family: Consolas, monaco, monospace;
+    margin: 0;
+    height: 100%;
+}
+table{
+    height:100vh;
+}
+td{
+    height: 100%;
+    vertical-align:top;
+}
+img{
+    width:80vw;
+    height:80vh;
+}
+/*--- NAVIGATION BAR ---*/
+ul {
+    list-style-type: none;
+    margin:0;
+    padding:0 ;
+    height: 100%;
+    text-align: center;
+}
+li{
+    font-size: 1.5em;
+    padding:0.2em;  
+    display: inline-block;
+}
+#nav{
+    width:20vw;
+    height:99vh;
+    align-items: center;
+}
+#content{
+    width:80vw; 
+    height:96vh;
+    overflow:scroll;  
+}
+.buttons{
+    padding:1em;
+    display:block;
+    width:18vw;
+    font-family: Consolas, monaco, monospace;
+    border-style: solid;
+}
+#pick{
+    font-size: 1em;
+}
+/*--- THEME BUTTONS ---*/
+.themebtns{
+    border-radius: 35px;
+    text-align: center;
+    padding:1em;
+    display:block;
+    width:15vw;
+    font-family: Consolas, monaco, monospace;
+    border-width: 0.3em;
+    border-style: solid ;
+}
+/*--- TOGGLE BUTTON ---*/
+#toggle{
+    position: absolute; 
+    list-style-type: none;
+    right:25px;
+    padding:1em;
+    width:150px;
+    float:right;
+    font-family: Consolas, monaco, monospace;
+}
+/*--- ERROR MESSAGE ---*/ 
+#errormessage{
+    height:3vh;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+</style>
+<!-- END OF STYLE  -->
+
+</head>
+
+<body onload="loadjson('content.json')">
+
+<table>
+    <!-- NAVIGATION BAR -->
+    <td id="nav">
+            <ul>
+                <div id="navButtons"></div>
+                <div>
+                    <!-- THEME BUTTONS -->
+                    <li id="pick">Pick a theme!</li>
+                    <li><button class="themebtns" id="default" onclick="showContent(clickedIndex,'Dark.css')">DARK</button></li>
+                    <li><button class="themebtns" id="day" onclick="showContent(clickedIndex,'Day.css')">DAY</button></li>
+                    <li><button class="themebtns" id="contrast" onclick="showContent(clickedIndex,'Contrast.css')">CONTRAST</button></li>
+                </div>     
+            </ul>
+    </td>
+     <!-- CONTENT WINDOW -->
+    <td >
+        <div>
+        <!-- TOGGLE BUTTON -->
+        <button id="toggle" onclick="toggleButton()">Abstract/Long Content</button>
+        <div id="content">
+            
+        </div>
+        <div id="errormessage"></div>
+    </div>
+    </td>
+</table>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js'></script>
+<script  >
+    //Global vars 
+    let contentArray = []; 
+    var abstractShown = true;
+    var clickedIndex; 
+    var clickedTheme; 
+    //Markdown var 
+    var mdConverter = new showdown.Converter(); 
+    
+    //Load json and store as array 
+    function loadjson(url) { 
+    fetch(url)
+        //Get json file
+        .then(r=>r.json()) // so far we have used r.text() in this place 
+        //Make array of objects 
+        .then(content => {
+            contentArray = content;
+            //console.log(contentArray);
+        })
+        //Make buttons
+        .then(b=>{
+            //Parse array 
+            contentArray.forEach(function(item, key){
+            var data = item.abstract;
+            //Get button title 
+            document.getElementById('navButtons').innerHTML += 
+            `<li><button onclick="showContent(${key}, clickedTheme)" class="buttons">${item.title}</button></li>`;
+            })
+        })
+        //Show welcome  page onload 
+        .then(d=> showContent(0, 'Dark.css'));
+    }
+
+    //Toggle button
+    function toggleButton(){
+        abstractShown = !abstractShown;
+        showContent(clickedIndex, clickedTheme);
+    }           
+
+    //Show content
+    function showContent(index, theme){
+        //Change theme
+        document.getElementById("css-link").href = theme;
+        clickedTheme = theme;
+        //console.log(clickedTheme);
+        document.getElementById("errormessage").innerHTML = ("Theme is now " + theme.replace(/.css/,''));
+        //Change content and error message 
+        clickedIndex = index;
+        //console.log(clickedIndex);
+        if (abstractShown == true){
+            document.getElementById('content').innerHTML = mdConverter.makeHtml(contentArray[index].abstract);
+            document.getElementById("errormessage").innerHTML = ("Abstract content is shown");
+        } else if (abstractShown != true){
+            document.getElementById('content').innerHTML = mdConverter.makeHtml(contentArray[index].long);
+            document.getElementById("errormessage").innerHTML = ("Full content is shown");
+        }
+    }
+</script>
+<!-- END OF SCRIPT -->
+</body>
+<!-- END OF BODY -->
+</html>
+<!-- END OF HTML -->
+<!---------------- END OF CODE ---------------->

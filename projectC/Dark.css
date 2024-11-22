@@ -1,0 +1,50 @@
+/*--- GENERAL ---*/
+body{
+    background-color: #000000;
+    color: #FFFFFF;
+}
+a {
+    color:#FFFFFF;
+}
+/*--- NAVIGATION BAR ---*/
+ul{
+    background-color: #F600FA;
+}
+.buttons{
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color:#000000 ;
+}
+.buttons:hover{
+    background-color: #222222;
+    border-style: groove;
+}
+#pick{
+    color:#FFFFFF;
+}
+.themebtns{
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+/* default button stays the same */
+#day:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    border-color: #000000;
+}
+#contrast:hover{
+    background-color: #0000ff;
+    color: #ffff00;
+    border-color: #ff0000;
+}
+/*--- STATUS BAR ---*/ 
+#errormessage{
+    color: #000000;    
+}
+/*--- TOGGLE BUTTON ---*/
+#toggle{
+    background-color: #000000;
+    color: #F600FA;
+}
+/*--- END OF CODE ---*/ 

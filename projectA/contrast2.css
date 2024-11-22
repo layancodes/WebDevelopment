@@ -1,0 +1,26 @@
+
+/*GENERAL*/
+body{
+    background-color: #0000ff;
+    color: #ffff00;
+}
+
+a {
+    color:#0000ff;
+}
+
+
+/*NAVIGATION*/
+ul{
+    background-color: #ffff00;
+}
+
+li{
+    color: #ffff00;
+}
+li a:hover{
+    color:#ff0000;
+}
+
+/*END OF CODE*/ 
+ 

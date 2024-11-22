@@ -1,0 +1,51 @@
+/*--- GENERAL ---*/
+body{
+    background-color: #0000ff;
+    color: #ffff00;
+}
+a {
+    color:#ffff00;
+}
+/*--- NAVIGATION BAR ---*/
+ul{
+    background-color: #ffff00;
+}
+.buttons{
+    background-color: #0000ff;
+    color: #ffff00;;
+    border-color: #0000ff;
+}
+.buttons:hover{
+    background-color: #ff0000;
+    border-style: groove;
+}
+#pick{
+    color:#0000ff;
+}
+.themebtns{
+    background-color: #0000ff;
+    color: #ffff00;
+    border-color: #ff0000;
+}
+/* contrast button stays the same */
+#default:hover{
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+#day:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    border-color: #000000;
+}
+/*--- ERROR MESSAGE ---*/ 
+#errormessage{
+    color: #0000ff;    
+}
+/*--- TOGGLE BUTTON ---*/
+#toggle{
+    background-color: #0000ff;
+    color: #ffff00;
+}
+/*--- END OF CODE ---*/ 
+ 
