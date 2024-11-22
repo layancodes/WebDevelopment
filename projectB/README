@@ -1,7 +1,10 @@
 ***
+# ProjectB
 
+## Overview 
 ProjectB is an AJAX-powered, PHP-based Content Management System with dynamic content rendering, asynchronous content loading, theme switching and theme persistence,  real-time visitor tracking, and error handling and  real-time status reporting. It fulfills the following:
 
+## Features 
 - Fetches and dynamically displays markdown-based content using the Fetch API, ensuring fast and efficient updates without reloading the page.
 - Implemetns a soft fail mechanism so that in case of errors (e.g., invalid request or unreadable file), the previous content remains visible, and a status message is displayed to inform the user.
 - Allows users to toggle between themes (dark, day, contrast) via external CSS stylesheets and JavaScript, with the active theme persisting across content loads.
@@ -10,7 +13,7 @@ ProjectB is an AJAX-powered, PHP-based Content Management System with dynamic co
 - Automatically loads the "Welcome" section  as default content when the CMS is accessed for the first time.
 - Includes buttons to simulate 404 (invalid request) and 503 (unreadable file) errors for robust error-handling demonstration.
 
-To use 
+## How to use
 - Clone the repository or download the project files.
 - Place the project in a PHP-compatible server environment.
 - Ensure all external  files (.css, .md, ,jpg, .gif, .txt) are in the same directory as the CMS.
@@ -19,4 +22,4 @@ To use
 layancodes
 2024
 
-****
+***
